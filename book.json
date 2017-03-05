@@ -1,5 +1,6 @@
 {
     "title": "Développement Android",
     "author": "Eldo Magan",
-    "root": "./support"
+    "root": "./support",
+    "language": "fr"
 }
