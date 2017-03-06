@@ -1,3 +1,8 @@
-# My Awesome Book
+# Développement Android
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+Avec Android studio 2.2
+
+
+
+Le but de ce cours est de découvrir la programmation sous android et de réaliser une vraie application.
+
