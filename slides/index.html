@@ -74,7 +74,7 @@
                         <li>Android</li>
                         <li>Le langage Java</li>
                         <li>Installation des outils</li>
-                        <li></li>
+                        <li>Démarrer un projet avec Android Studio</li>
                     </ol>
                 </section>  
                 <section>
@@ -98,6 +98,26 @@
                         </p>
                     </section>
                     <section>
+                        <h3>Historique</h3>
+                        <ul>
+                            <li>2008 Android version 1.0</li>
+                            <li>2009 v1.1 was released, v1.5 (CupCake), v1.6 (Donut), v2.0/2.1 (Eclair)</li>
+                            <li>2010 v2.2 (Froyo), v2.3 (GingerBread)</li>
+                            <li>2011 v3.0 (HoneyComb), v4.0 (Ice Cream Sandwich)</li>
+                            <li>2012 v4.1 (Jelly Bean)</li>
+                            <li>2013 v4.4 - 4.4.4, v4.4W - 4.4W.2 (KitKat)</li>
+                            <li>2014 v5.0 - 5.1.1 (Lollipop)</li>
+                            <li>2015 v6.0 - 6.0.1 (Marshmallow)</li>
+                            <li>2016 v7.0 - 7.1.1 (Nougat)</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Répartitions des versions</h3>
+                        <p>
+                            <img src="images/Android_version_distribution_(January_2017).png">
+                        </p>
+                    </section>
+                    <section>
                         <p>
                             Le développement sous Android repose essentiellement sur deux éléments:
                             <ul>
@@ -110,6 +130,129 @@
                 <section>
                     <section>
                         <h3>Le language Java</h3>
+                    </section>
+                    <section>
+                        <p>Le développement sous android se fait essentiellement avec le language Java</p>
+                        <p>
+                            Il est donc nécessaire de comprendre les concepts de base du language Java.
+                        </p>
+                    </section>
+                    <section>
+                        <h3>Les classes</h3>
+                        <p>
+                            <pre><code class="java" data-trim contenteditable>
+                                // On déclare une classe de cette façon
+                                class MaClasse
+                                {
+                                    // Les déclarations de variables et methodes se font ici
+                                }
+                            </code></pre>
+                        </p>
+                    </section>
+                    <section>
+                        <h3>Les variables</h3>
+                        <p>
+                            <pre><code class="java" data-trim contenteditable>
+                                class Main {
+                                    // Variable primitive
+                                    int nombre;
+                                    
+                                    // variable objet
+                                    Objet instance;
+                                }
+                            </code></pre>
+                        </p>
+                    </section>
+                    <section>
+                        <h3>Les methodes</h3>
+                        <p>
+                            <pre><code class="java" data-trim contenteditable>
+                                class Main {
+                                    // Une methode
+                                    public void methode() {
+                                        // Variable dans une methode
+                                        int nombreCarre;
+
+                                        nombreCarre = nombre * nombre;
+                                    }
+                                }
+                            </code></pre>                         
+                        </p>
+                    </section>
+                    <section>
+                        <h3>L'héritage</h3>
+                        <p>
+                            <pre><code class="java" data-trim contenteditable>
+                                abstract class Personne {
+                                    protected String nom;
+                                    protected String prenom;                                    
+
+                                    public abstract void description();
+                                }
+
+                                class Developpeur extends Personne {
+                                    private String[] languages;
+
+                                    public void description() {
+
+                                    }
+                                }
+                            </code></pre>
+                        </p>
+                    </section>
+                    <section>
+                        <h3>Les interface</h3>
+                        <pre><code class="java" data-trim contenteditable>
+                            interface MonInterface {
+                                void maMethode();
+                            }
+
+                            class Objet implements MonInterface {
+                                void maMethode() {
+
+                                }
+                            }
+                        </code></pre>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h3>Installation des outils</h3>
+                        <ul>
+                            <li>Je Java Development Toolkit (JDK version 1.8)</li>
+                            <li>Android Studio et Android SDK</li>
+                        </ul>
+                    </section>                        
+                    <section>
+                        <h3>JDK 1.8</h3>
+                        <p>
+                            Le JDK fournit un environnement de développement pour le Java                            
+                        </p>
+                        <p>
+                            <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">
+                                http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+                            </a>
+                        </p>
+                    </section>
+                    <section>
+                        <h3>Android SDK + Android Studio</h3>
+                        <p>
+                            Le SDK fournit un environnement de devéloppement qui facilite la tâche. <br>
+                            <a href="https://developer.android.com/studio/index.html">https://developer.android.com/studio/index.html</a>
+                        </p>
+                    </section>
+                    <section>
+                        <h3>Paquets nécessaires</h3>
+                        <ul>
+                            <li>Android SDK Build-tools</li>                            
+                            <li>Android SDK Tools</li>
+                            <li>Android SDK Platform-tools</li>
+                            <li>Android Support Repository</li>
+                            <li>Android Support Library</li>
+                            <li>Google Repository</li>
+                            <li>Google USB Driver (Windows)</li>
+                            <li>Intel x86 Emulator Accelerator (HAXM installer)</li>
+                        </ul>
                     </section>
                 </section>
             </div>
