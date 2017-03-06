@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>Formation Android</title>
+
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/black.css">
+
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section class="present">
+                    <h1>Développement Android</h1>
+                    <h4>Avec Android Studio 2.2</h4>
+                    <small>
+                        <a href="https://eldomagan.com">Eldo Magan</a> <br><br>
+                        <a href="https://twitter.com/eldomagan">@EldoMagan</a>
+                        - <a href="https://github.com/eldomagan">&lt;/&gt;eldomagan</a>
+                    </small>
+                </section>
+                <section>
+                    <h3>Pour...</h3>
+                    <p>
+                        Découvrir la programmation sous Android et apprendre à concevoir des applications complètes.
+                    </p>
+                    <p>
+                        Nous allons découvrir principalement comment:
+                        <ul>
+                            <li class="fragment">Construire l'interface d'une application</li>
+                            <li class="fragment">Naviguer entre les applications</li>
+                            <li class="fragment">Manipuler les données</li>
+                            <li class="fragment">Comminuquer avec le réseau</li>
+                            <li class="fragment">...</li>
+                        </ul>
+                    </p>
+                </section>  
+                <section>
+                    <h3>Le plan</h3>
+                    <ol>
+                        <li class="fragment">Découverte d'Android</li>
+                        <li class="fragment">Les bases d'android</li>
+                        <li class="fragment">Conception d'une vraie application</li>
+                        <li class="fragment">Les concepts avancés d'Android</li>
+                        <li class="fragment">MVP pour des applications plux flexible</li>
+                    </ol>
+                </section>              
+                <section>
+                    <h3>Ressources</h3>
+                    <p>
+                        Toutes les ressources de cette formation sont disponibles sur: <br>
+                        <a href="https://github.com/eldomagan/formation-android">
+                            https://github.com/eldomagan/formation-android
+                        </a>
+                    </p>
+                </section>
+                <section>
+                    <h3>Partie 2: Découverte d'Android</h3>
+                    <ol>
+                        <li>Android</li>
+                        <li>Le langage Java</li>
+                        <li>Installation des outils</li>
+                        <li></li>
+                    </ol>
+                </section>  
+                <section>
+                    <section>
+                        <h3>Android</h3>
+                        <p>
+                            Android est une plateforme open source pour mobile qui fournit un environnement d'exécution pour des applications.
+                        </p>
+                    </section>
+                    <section>
+                        <p>
+                            La plateforme android est constitué des éléments suivants:
+                            <ul>
+                                <li class="fragment">Un système d'exploitation</li>
+                                <li class="fragment">Une suite de librairies de base (sqlite, OpenGL, WebKit..)</li>
+                                <li class="fragment">Un framework d'application</li>
+                                <li class="fragment">Un runtime</li>
+                                <li class="fragment">Des applis des base</li>
+                                <li class="fragment">Android SDK</li>
+                            </ul>
+                        </p>
+                    </section>
+                    <section>
+                        <p>
+                            Le développement sous Android repose essentiellement sur deux éléments:
+                            <ul>
+                                <li>Le language Java</li>
+                                <li>Le SDK Android</li>
+                            </ul>
+                        </p>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h3>Le language Java</h3>
+                    </section>
+                </section>
+            </div>
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
+
+        <script>
+            // More info https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                history: true,
+
+                // More info https://github.com/hakimel/reveal.js#dependencies
+                dependencies: [
+                    { src: 'plugin/markdown/marked.js' },
+                    { src: 'plugin/markdown/markdown.js' },
+                    { src: 'plugin/notes/notes.js', async: true },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+                ]
+            });
+        </script>
+    </body>
+</html>
