@@ -69,7 +69,7 @@
                     </p>
                 </section>
                 <section>
-                    <h3>Partie 2: Découverte d'Android</h3>
+                    <h3>Partie 1: Découverte d'Android</h3>
                     <ol>
                         <li>Android</li>
                         <li>Le langage Java</li>
@@ -253,6 +253,256 @@
                             <li>Google USB Driver (Windows)</li>
                             <li>Intel x86 Emulator Accelerator (HAXM installer)</li>
                         </ul>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h3>Composant d'une application Android</h3>
+                        <ul>
+                            <li>Les Activités</li>
+                            <li>Les Services</li>
+                            <li>Les Broadcast Receiver</li>
+                        </ul>
+                    </section>                    
+                    <section>
+                        <h3>Les Activités</h3>
+                        <p>
+                            Chaque écran d'une application est gérer par une Activité. 
+                        </p>
+                        <p>C'est donc des Activités que nous allons utiliser pour interagir avec l'utilisateur</p>
+                        <p>Une activité est le plus souvent composé de plusieurs widgets (View)</p>
+                    </section>
+                    <section>
+                        <h3>Les Services</h3>
+                        <p>
+                            Lorque nous avons besoin d'éxécuter certaines opérations qui n'ont pas besoin d'interagir avec l'utilisateur (téléchargement..). Les sevices sont exécutés en arrière plan.
+                        </p>
+                    </section>
+                    <section>
+                        <h3>Les Broadcast Receiver</h3>
+                        <p>
+                            Les Broadcast Receiver permettent à une application android de repondre à certains événements déclenchés par le System Android (Réception d'SMS, Appel Entrant...)
+                        </p>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h3>Démarrer un projet Android</h3>
+                        <h4>Hello Android !</h4>
+                    </section>
+                    <section>
+                        <h3>Création du projet</h3>
+                        <img src="images/start-new-project-1.png">
+                    </section>                                        
+                    <section>
+                        <img src="images/start-new-project-2.png">
+                    </section>
+                    <section>                        
+                        <ul>
+                            <li><strong>Application Name: </strong> Nom de votre application</li>
+                            <li><strong>Company Domain: </strong> nom de domaine du développeur. Pas très important, on peut mettre n'importe quoi</li>
+                            <li><strong>Package Name: </strong> c'est composé du nom de domaine et du nom de l'application. Il est utilisé comme identifiant unique de l'application.</li>
+                            <li><strong>Project Location: </strong> Lieu où le repertoire du projet sera créé</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <img src="images/start-new-project-3.png">
+                    </section>                    
+                    <section>
+                        <img src="images/start-new-project-4.png">
+                    </section>
+                    <section>
+                        <img src="images/start-new-project-5.png">
+                    </section>
+                    <section>
+                        <img src="images/start-new-project-6.png">
+                    </section>
+                    <section>
+                        <img src="images/start-new-project-7.png">
+                    </section>
+                </section>
+                <section>
+                    <h3>Partie 2: Les bases d'Android</h3>
+                    <ul>
+                        <li>Construire l'interface graphique de l'application</li>
+                        <li>Les ressources</li>
+                        <li>Personnaliser le style de l'application</li>
+                        <li>Gérer plusieurs écrans</li>
+                        <li>Stockage des données</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Construire l'interface graphique</h3>
+                </section>
+                <section>
+                    <h3>Les vues simples</h3>
+                    <ul>
+                        <li>TextView</li>
+                        <li>Button</li>
+                        <li>EditText</li>
+                        <li>ImageView</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Les vues de type conteneurs</h3>
+                    <ul>
+                        <li>LinearLayout</li>
+                        <li>RelativeLayout</li>
+                        <li>FrameLayout</li>
+                        <li>TableLayout</li>
+                    </ul>
+                </section>
+                <section>
+                    <section>
+                        <h3>Afficher une liste d'éléments</h3>
+                        <ul>
+                            <li>ListView</li>
+                            <li>RecyclerView</li>
+                        </ul>
+                    </section>                                            
+                </section>
+                <section>
+                    <section>
+                        <h3>ListView</h3>
+                        <p>
+                            <img src="images/listview.jpg">
+                        </p>
+                    </section>
+                    <section>
+                        <pre><code class="xml" data-trim contenteditable>
+                            &lt;ListView
+                                android:id="@+id/list_pays"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"&gt;
+
+                            &lt;/ListView&gt;
+                        </code></pre>                        
+                    </section>
+                    <section>
+                        <pre><code class="java" data-trim contenteditable>
+                            public void onCreate(Bundle savedInstanceState) {
+
+                                ListView listPays = (ListView) findViewById(R.id.list_pays);
+
+                            }
+                        </code></pre>
+                    </section>
+                    <section>
+                        <pre><code class="java" data-trim contenteditable>
+                            public void onCreate(Bundle savedInstanceState) {
+
+                                String[] pays = new String[] {
+                                    "Bénin",
+                                    "Cameroun",
+                                    "Cote d'ivoire",
+                                    "..."
+                                };
+
+                            }
+                        </code></pre>
+                    </section>
+                    <section>
+                        <pre><code class="java" data-trim contenteditable>
+                            ArrayAdapter&lt;String&gt; paysAdapter = new ArrayAdapter&lt;String&gt;(
+                                this, 
+                                android.R.layout.simple_list_item_1, 
+                                pays
+                            );
+
+                            listPays.setAdapter(paysAdapter);
+                        </code></pre>
+                    </section>
+                    <section>
+                        <p>Pour des éléments beaucoup plus complexe, le ArrayAdapter n'est plus adapté.</p>
+                        <p>Il faut alors créer son adapter soi même</p>
+                    </section>
+                    <section>
+                        <pre><code class="java" data-trim contenteditable>
+                            class User {
+                                private String nom;
+                                private String prenom
+                                private String description;    
+
+                                public User(String nom, String prenom, String description) {
+                                    this.nom = nom;
+                                    this.prenom = prenom;
+                                    this.description = description;
+                                }
+
+                                // generate getters and setters
+                            }
+                        </code></pre>
+                    </section>
+                    <section>
+                        <pre><code class="xml" data-trim contenteditable>
+                            &lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" &gt;
+                                &lt;TextView
+                                android:id="@+id/tvPrenom"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Prenom" /&gt;
+
+                                &lt;TextView
+                                    android:id="@+id/tvNom"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@id/tvPrenom"
+                                    android:text="Nom" /&gt;
+
+                                &lt;TextView
+                                    android:id="@+id/tvDescription"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/tvPrenom"
+                                    android:text="Description" /&gt;
+                            &lt;/LinearLayout&gt;
+                        </code></pre>
+                    </section>
+                    <section>
+                        <pre><code class="java" data-trim contenteditable>
+                            public class UsersAdapter extends ArrayAdapter&lt;User&gt; {
+
+                                public UsersAdapter(Context context, ArrayList&lt;User&gt; users) {
+                                    super(context, 0, users);
+                                }
+
+                                @Override
+                                public View getView(int position, View convertView, ViewGroup parent) {
+                                
+                                    User user = getItem(position);    
+                                    
+                                    if (convertView == null) {
+                                        convertView = LayoutInflater.from(getContext()).inflate(R.layout.item_user, parent, false);
+                                    }
+                                
+                                    TextView tvPrenom = (TextView) convertView.findViewById(R.id.tvPrenom);
+                                    TextView tvNom = (TextView) convertView.findViewById(R.id.tvNom);
+                                    TextView tvDescription = (TextView) convertView.findViewById(R.id.tvDescription);
+                                
+                                    tvPrenom.setText(user.getPrenom());
+                                    tvNom.setText(user.getNom());
+                                    tvDescription.setText(user.getDescription());
+                                
+                                    return convertView;
+                                }
+                            }
+                        </code></pre>
+                    </section>
+                    <section>
+                        <pre><code class="java" data-trim contenteditable>
+                            ListView userList = (ListView) findViewById(R.id.user_list);
+                            ArrayList&lt;User&gt; users = new ArrayList&lt;&gt;();
+
+                            // Ajoute de plusieurs utilisateurs
+                            users.add(new User('Nom1', 'Prénom1', 'Description1'))
+                            users.add(new User('Nom2', 'Prénom2', 'Description2'))
+                            //...
+
+                            UsersAdapter = new UserAdapter(this, users);
+                            userList.setAdapter(UserAdapter);
+                        </code></pre>
                     </section>
                 </section>
             </div>
